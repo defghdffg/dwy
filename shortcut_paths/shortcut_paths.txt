@@ -1,0 +1,43 @@
+﻿1.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+10.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+11.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+12.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+13.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+14.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+15.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+16.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+17.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+18.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+19.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+2.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+20.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+21.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+22.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+23.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+24.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+25.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+26.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+27.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+28.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+29.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+3.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+30.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+31.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+32.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+33.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+34.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+35.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+36.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+37.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+38.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+4.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+5.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+6.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+7.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+8.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+9.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+Google Chrome.lnk: C:\Program Files\Google\Chrome\Application\chrome.exe
+Microsoft Edge.lnk: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+QuickQ.lnk: C:\Users\Administrator\AppData\Local\QuickQ\QuickQ.exe
+WPS Office.lnk: C:\Users\Administrator\AppData\Local\Kingsoft\WPS Office\ksolaunch.exe
+百度网盘.lnk: C:\Users\Administrator\AppData\Roaming\baidu\BaiduNetdisk\BaiduNetdisk.exe
