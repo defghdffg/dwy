@@ -60,6 +60,10 @@ try {
     # 压缩快捷方式路径文件
     if (Test-Path $shortcutZip) { Remove-Item -Path $shortcutZip }
     Compress-Archive -Path $shortcutFile -DestinationPath $shortcutZip
+    if (-Not (Test-Path $shortcutZip)) {
+        Write-Error "快捷方式压缩包生成失败！"
+        exit
+    }
 
     # 压缩批量上传文件
     if (-not (Get-ChildItem -Path "$batchUploadFolder\*" -ErrorAction SilentlyContinue)) {
@@ -68,6 +72,10 @@ try {
     }
     if (Test-Path $batchUploadZip) { Remove-Item -Path $batchUploadZip }
     Compress-Archive -Path "$batchUploadFolder\*" -DestinationPath $batchUploadZip
+    if (-Not (Test-Path $batchUploadZip)) {
+        Write-Error "批量上传压缩包生成失败！"
+        exit
+    }
 
     # 创建 Release
     Write-Output "创建 Release..."
@@ -84,9 +92,14 @@ try {
         prerelease = $false
     } | ConvertTo-Json -Depth 10
 
-    $response = Invoke-RestMethod -Uri $releaseUrl -Method Post -Headers $headers -Body $body
-    $releaseId = $response.id
-    Write-Output "Release 创建成功，ID: $releaseId"
+    try {
+        $response = Invoke-RestMethod -Uri $releaseUrl -Method Post -Headers $headers -Body $body
+        $releaseId = $response.id
+        Write-Output "Release 创建成功，ID: $releaseId"
+    } catch {
+        Write-Error "Release 创建失败：$($_.Exception.Message)"
+        exit
+    }
 
     # 上传附件函数
     function Upload-Asset {
@@ -94,14 +107,19 @@ try {
             [string]$filePath,
             [string]$releaseId
         )
+        Write-Output "准备上传文件：$filePath"
         $fileName = [System.IO.Path]::GetFileName($filePath)
         $uploadUrl = "https://uploads.github.com/repos/$repo/releases/$releaseId/assets?name=$fileName"
         $headers = @{
             Authorization = "Bearer $token"
             "Content-Type" = "application/zip"
         }
-        $response = Invoke-RestMethod -Uri $uploadUrl -Method Post -Headers $headers -InFile $filePath -ContentType "application/zip"
-        Write-Output "文件已上传: $($response.browser_download_url)"
+        try {
+            $response = Invoke-RestMethod -Uri $uploadUrl -Method Post -Headers $headers -InFile $filePath -ContentType "application/zip"
+            Write-Output "文件已上传成功: $($response.browser_download_url)"
+        } catch {
+            Write-Error "上传文件时发生错误：$($_.Exception.Message)"
+        }
     }
 
     # 上传压缩包
